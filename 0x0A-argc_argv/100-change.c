@@ -1,5 +1,5 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main- prints min no. coins for change
@@ -7,7 +7,7 @@
  * @argv: argmnt
  * Return: 0
  */
-int main (int argc, char **argv)
+int main(int argc, char **argv)
 {
 	int tot, count;
 	unsigned int i;

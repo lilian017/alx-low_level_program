@@ -4,9 +4,8 @@
 /**
  * _strdup - function that points to newly allocated memory space
  * contains copy of the string given as the parameter
- * @str: pointer string
- * @char: character string
- * Return: pointer to new string that is a duplicate of str
+ *@str: source string
+ *Return: pointer to new string that is a duplicate of str
  * NULL if str is NULL
  */
 char *_strdup(char *str)
@@ -14,7 +13,7 @@ char *_strdup(char *str)
 	char *copy;
 	int i, ln = 0;
 
-	if ( str == NULL)
+	if (str == NULL)
 		return (NULL);
 
 	while (str[ln] != '\0')
@@ -24,8 +23,8 @@ char *_strdup(char *str)
 	if (copy == NULL)
 		return (NULL);
 
-	for (i =0; i< ln; i++)
-		copy[i] =str [i];
+	for (i = 0; i < ln; i++)
+		copy[i] = str[i];
 	copy[ln] = '\0';
 
 	return (copy);

@@ -4,12 +4,14 @@
 
 /**
  * main - function that prints operation results
+ * @argc: argument count
+ * @argv: argument values
  * Return: 0
  */
 
-int main(int argc,char * argv[])
+int main(int argc, char *argv[])
 {
-	int *op(int, int);
+	int (*op)(int, int);
 
 	if (argc != 4)
 	{
@@ -20,8 +22,8 @@ int main(int argc,char * argv[])
 	if (!op)
 	{
 		printf("Error\n");
-		exit (99);
+		exit(99);
 	}
-	printf("%d\n", *op(atoi(argv[1]), atoi(argv[3])));
+	printf("%d\n", op(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }

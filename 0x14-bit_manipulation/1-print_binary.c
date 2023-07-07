@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
- * power - calculates (base and power)
+ * _power - calculates (base and power)
  * @base: base of the exponent
- * @pow: powet of the exponenet
- * Returns: value of base power
+ * @pow: powers of the exponenet
+ * Return: value of base power
  */
 
 unsigned long int _power(unsigned int base, unsigned int pow)
@@ -30,7 +30,7 @@ void print_binary(unsigned long int n)
 	char flag;
 
 	flag = 0;
-	j = _power(2, sizeof(unsigned long int) * 8 -1);
+	j = _power(2, sizeof(unsigned long int) * 8 - 1);
 
 	while (j != 0)
 	{

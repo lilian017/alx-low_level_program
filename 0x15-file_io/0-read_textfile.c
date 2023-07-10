@@ -9,7 +9,7 @@
  * read_textfile - reading text file that also prints to POSIX stdout
  * @filename: points to file name
  * @letters: number of letters to be read and printed by function
- * Return: 0 if filename NULL if fails or write fails 
+ * Return: 0 if filename NULL if fails or write fails
  * bytes read and printed
  */
 ssize_t read_textfile(const char *filename, size_t letters)

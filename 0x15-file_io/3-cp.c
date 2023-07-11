@@ -79,17 +79,17 @@ void code100(int check, int fn)
 int main(int argc, char *argv[])
 {
 	int fn_from, fn_to, close_to, close_from;
-	ssize_t lenrl, lenw;
+	ssize_t lenr, lenw;
 	char buffer[1024];
 	mode_t file_perm;
 
-	code97(arg);
+	code97(argc);
 	fn_from = open(argv[1], O_RDONLY);
 	code98((size_t)fn_from,argv[1], -1, -1);
 	file_perm = S_IRUSR | S_IWUSR | S_IRGRP |S_IROTH;
 	fn_to = open(argv[2], O_WRONLY |O_CREAT | O_TRUNC, file_perm);
 	code99((ssize_t)fn_to, argv[2], fn_from, -1);
-	lnr = 1024;
+	lenr = 1024;
 	while (lenr == 1024)
 	{
 		lenr = read(fn_from, buffer, 1024);
@@ -101,7 +101,7 @@ int main(int argc, char *argv[])
 	}
 	close_to = close(fn_to);
 	close_from = close(fn_from);
-	code100(close_to, fd_to);
+	code100(close_to, fn_to);
 	code100(close_from, fn_from);
 	return (0);
 }

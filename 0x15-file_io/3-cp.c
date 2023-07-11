@@ -11,7 +11,8 @@ void code97(int argc)
 {
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");		exif(97);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
 	}
 }
 
@@ -75,7 +76,7 @@ void code100(int check, int fn)
  * @argv: array of pointers to arguments
  * Return: 0 on success
  */
-int main(int argc, cha *argv[])
+int main(int argc, char *argv[])
 {
 	int fn_from, fn_to, close_to, close_from;
 	ssize_t lenrl, lenw;
